@@ -1,0 +1,11 @@
+services:
+  auto-cb:
+    build: .
+    volumes:
+      - auto_cb_data:/data
+    env_file:
+      - .env.example
+    command: ["area-payload", "--country", "sg"]
+
+volumes:
+  auto_cb_data:
